@@ -1,34 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Talent-pool landing page
 
-## Getting Started
+이 프로젝트는 Talent-pool landing page의 소스코드입니다.
 
-First, run the development server:
+> Talent-pool은 대학생이 본 프로젝트 인재풀에 등록하고, 채용 제안을 받고자 하는 니즈가 있는지 검증하기 위한 소규모 프로젝트입니다.
+> 실제 인재풀을 구현하지는 않고, 우선적으로 고객의 니즈를 검증하기 위한 최소한의 스택으로 제작되었습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Project Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### client
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+본 프로젝트에서 사용된 코어 프론트엔드 기술은 다음과 같습니다.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- React
+- Next
