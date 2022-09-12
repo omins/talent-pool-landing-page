@@ -24,14 +24,29 @@ export default function Home() {
       <Head>
         <title>인재풀 등록</title>
       </Head>
-      <header></header>
-      <main>
-        <section>
-          <ProfileCard userInfo={sampleProfiles[0]} isShadow={true} />
-          <RecruitMsg />
-        </section>
-      </main>
-      <footer></footer>
+      <div className={styles['common-inner']}>
+        <header></header>
+        <main className={styles['main-container']}>
+          <section>
+            <div className={styles['profile-card-container']}>
+              <ProfileCard userInfo={sampleProfiles[0]} isShadow={true} />
+              <div
+                className={styles['recruit-msg-container']}
+                style={{ top: '171px', left: '85px' }}
+              >
+                <RecruitMsg zIndex={5000} />
+              </div>
+              <div
+                className={styles['recruit-msg-container']}
+                style={{ top: '337px', left: '-52px' }}
+              >
+                <RecruitMsg zIndex={-1} />
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer></footer>
+      </div>
     </div>
   );
 }

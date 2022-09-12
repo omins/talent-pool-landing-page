@@ -25,3 +25,24 @@
     font-size: 1.8rem;
   }
 }
+
+.profile-card-container {
+  display: inline-block;
+  position: relative;
+}
+
+.recruit-msg-container {
+  position: absolute;
+}
+
+.common-inner {
+  max-width: 767px;
+  margin: 0 auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

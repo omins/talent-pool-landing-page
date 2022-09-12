@@ -1,7 +1,7 @@
 import styles from './RecruitMsg.module.css';
-export default function RecruitMsg() {
+export default function RecruitMsg({ zIndex }) {
   return (
-    <div className={styles['msg-box']}>
+    <div className={styles['msg-box']} style={{ zIndex: zIndex }}>
       <p className={styles['msg-content']}>
         채용 담당자가 오민석님께
         <br />
