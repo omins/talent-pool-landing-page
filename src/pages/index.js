@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import Head from 'next/head';
+
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import RecruitMsg from '../components/RecruitMsg/RecruitMsg';
 import ButtonCta from '../components/ButtonCta/ButtonCta';
 import UserList from '../components/UserList/UserList';
+import ProfileModal from '../components/ProfileModal/ProfileModal';
 
 import styles from '../../styles/Home.module.css';
-import ProfileModal from '../components/ProfileModal/ProfileModal';
 
 const sampleProfiles = [
   {
@@ -64,36 +65,60 @@ export default function Home() {
       <Head>
         <title>인재풀 등록</title>
       </Head>
-      <div className={styles['common-inner']}>
-        <header></header>
-        <main className={styles['main-container']}>
-          <section className={styles['page-second']}>
-            <div className={styles['profile-card-container']}>
-              <ProfileCard userInfo={sampleProfiles[0]} isShadow={true} />
-              <div
-                className={styles['recruit-msg-container']}
-                style={{ top: '171px', left: '85px' }}
-              >
-                <RecruitMsg zIndex={5000} />
-              </div>
-              <div
-                className={styles['recruit-msg-container']}
-                style={{ top: '337px', left: '-52px' }}
-              >
-                <RecruitMsg zIndex={-1} />
-              </div>
-            </div>
-            <ButtonCta style={{ marginTop: '30px' }} />
-          </section>
-          <section>
-            <UserList
-              userInfo={sampleProfiles}
-              onUserClick={userClickHandler}
+      <header className={styles.header}>
+        <h1 className={styles.title}>Logo</h1>
+      </header>
+      <main className={styles['main-container']}>
+        <section className={styles['page-first']}>
+          <p className={styles.desc}>
+            인재풀에 프로필 올리고
+            <br />
+            <em>채용 제안</em> 받으세요
+          </p>
+          <ButtonCta isWhiteBtn={true} style={{ marginTop: '380px' }} />
+        </section>
+        <section className={styles['page-second']}>
+          <p className={styles.desc}>
+            프로필 등록하면
+            <br />
+            채용 제안이 찾아와요!
+          </p>
+          <div className={styles['profile-card-container']}>
+            <ProfileCard
+              userInfo={sampleProfiles[0]}
+              isShadow={true}
+              style={{ marginTop: '35px' }}
             />
-          </section>
-        </main>
-        <footer></footer>
-      </div>
+            <div
+              className={styles['recruit-msg-container']}
+              style={{ top: '171px', left: '85px' }}
+            >
+              <RecruitMsg zIndex={5000} />
+            </div>
+            <div
+              className={styles['recruit-msg-container']}
+              style={{ top: '337px', left: '-52px' }}
+            >
+              <RecruitMsg zIndex={-1} />
+            </div>
+          </div>
+          <ButtonCta style={{ marginTop: '30px' }} />
+        </section>
+        <section className={styles['page-third']}>
+          <p className={styles.desc}>
+            이미 등록한 분들의
+            <br />
+            프로필을 확인해보세요!
+          </p>
+          <UserList
+            userInfo={sampleProfiles}
+            onUserClick={userClickHandler}
+            style={{ marginTop: '115px' }}
+          />
+          <ButtonCta style={{ marginTop: '130px' }} />
+        </section>
+      </main>
+      <footer></footer>
       {modalState.isActive && (
         <ProfileModal
           userInfo={sampleProfiles[modalState.id]}

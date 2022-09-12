@@ -1,9 +1,9 @@
 import UserItem from '../UserItem/UserItem';
 import styles from './UserList.module.css';
 
-export default function UserList({ userInfo, onUserClick }) {
+export default function UserList({ userInfo, onUserClick, style }) {
   return (
-    <ul>
+    <ul style={{ ...style }}>
       {userInfo.map(user => {
         return <UserItem key={user.id} user={user} onUserClick={onUserClick} />;
       })}
