@@ -1,0 +1,177 @@
+.profile-card {
+  width: 233px;
+  height: 481px;
+  border-radius: 15px;
+  background-color: #1e201f;
+  color: white;
+  padding-top: 54px;
+  padding-left: 13px;
+  padding-right: 13px;
+
+  margin: 50px; /* 스타일작업용 임시 마진 */
+}
+
+.shadow {
+  filter: drop-shadow(4px 4px 50px rgba(0, 0, 0, 0.25));
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 208px;
+  margin-bottom: 25px;
+}
+
+.profile-header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header-info .name {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fafafa;
+}
+
+.profile-header-info .major {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 9px;
+  color: #d3d3d3;
+}
+
+.profile-header-info .school {
+  margin-top: 4px;
+  font-weight: 500;
+  font-size: 10px;
+  color: #d3d3d3;
+}
+
+.profile-header .pfp {
+  border-radius: 50%;
+}
+
+.profile-detail {
+  width: 233px;
+  height: 357px;
+  margin-left: -13px;
+  margin-right: -13px;
+  background-color: #fff;
+  color: black;
+  border-radius: 8px;
+}
+
+.profile-detail-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.profile-detail-header .title {
+  font-weight: 500;
+  font-size: 10px;
+  color: #1f2120;
+}
+
+.profile-detail-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.school-info {
+  display: flex;
+  flex-direction: column;
+  padding: 11px 15px 15px 14px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.school-info .title-group {
+  display: flex;
+  align-items: center;
+  margin-top: 11px;
+}
+
+.category-title {
+  font-weight: 500;
+  font-size: 10px;
+  color: #494a49;
+}
+
+.category-subtitle {
+  font-weight: 500;
+  font-size: 8px;
+  color: #7b7b7b;
+  margin-left: 4px;
+}
+
+.school-info-group {
+  display: flex;
+  margin-top: 21px;
+}
+
+.img-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.school-detail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4px;
+}
+
+.school-detail .school {
+  font-weight: 500;
+  font-size: 10px;
+  color: #2e2e2e;
+}
+
+.school-detail .major {
+  margin-top: 4px;
+  font-weight: 500;
+  font-size: 8px;
+  color: #838383;
+}
+
+.user-info {
+  padding: 14px 15px;
+}
+
+.user-desc {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 8px;
+  color: #464746;
+}
+
+.skill-group {
+  margin-top: 25px;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 21px;
+  padding: 6px 8px;
+  margin-bottom: 5px;
+  border: 1px solid #d8d8d8;
+  background-color: #fff;
+  border-radius: 90px;
+}

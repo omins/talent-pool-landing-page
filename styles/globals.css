@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -87,8 +91,8 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -112,9 +116,8 @@ html {
 
 body {
   line-height: 1;
-  max-width: 768px;
-  margin: 0 auto;
 }
+
 ol,
 ul {
   list-style: none;
