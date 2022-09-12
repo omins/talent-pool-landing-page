@@ -1,0 +1,49 @@
+.msg-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 200px;
+  height: 86px;
+  padding: 8px 15px 12px 15px;
+  background-color: #fff;
+  border-radius: 4px;
+  filter: drop-shadow(4px 4px 30px rgba(0, 0, 0, 0.25));
+  z-index: 5000;
+}
+
+.msg-box::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 45px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.msg-content {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: -0.5px;
+}
+
+.msg-content em {
+  font-weight: 700;
+  color: #286cec;
+}
+
+.btn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 175px;
+  height: 26px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: #1e201f;
+  color: #f8f8f8;
+}

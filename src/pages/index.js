@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
+import RecruitMsg from '../components/RecruitMsg/RecruitMsg';
 
 import styles from '../../styles/Home.module.css';
 
@@ -27,6 +28,7 @@ export default function Home() {
       <main>
         <section>
           <ProfileCard userInfo={sampleProfiles[0]} isShadow={true} />
+          <RecruitMsg />
         </section>
       </main>
       <footer></footer>
