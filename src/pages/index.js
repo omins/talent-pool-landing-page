@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import RecruitMsg from '../components/RecruitMsg/RecruitMsg';
+import ButtonCta from '../components/ButtonCta/ButtonCta';
 
 import styles from '../../styles/Home.module.css';
 
@@ -27,7 +28,7 @@ export default function Home() {
       <div className={styles['common-inner']}>
         <header></header>
         <main className={styles['main-container']}>
-          <section>
+          <section className={styles['page-second']}>
             <div className={styles['profile-card-container']}>
               <ProfileCard userInfo={sampleProfiles[0]} isShadow={true} />
               <div
@@ -43,6 +44,7 @@ export default function Home() {
                 <RecruitMsg zIndex={-1} />
               </div>
             </div>
+            <ButtonCta style={{ marginTop: '30px' }} />
           </section>
         </main>
         <footer></footer>
