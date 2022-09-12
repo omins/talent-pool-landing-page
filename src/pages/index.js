@@ -1,11 +1,12 @@
+import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import RecruitMsg from '../components/RecruitMsg/RecruitMsg';
 import ButtonCta from '../components/ButtonCta/ButtonCta';
 import UserList from '../components/UserList/UserList';
 
 import styles from '../../styles/Home.module.css';
+import ProfileModal from '../components/ProfileModal/ProfileModal';
 
 const sampleProfiles = [
   {
@@ -44,6 +45,20 @@ const sampleProfiles = [
 ];
 
 export default function Home() {
+  const [modalState, setModalState] = useState({
+    isActive: false,
+    id: 0,
+  });
+
+  function userClickHandler(event) {
+    setModalState(prev => {
+      return {
+        isActive: true,
+        id: event.target.closest('li').id,
+      };
+    });
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -71,11 +86,20 @@ export default function Home() {
             <ButtonCta style={{ marginTop: '30px' }} />
           </section>
           <section>
-            <UserList userInfo={sampleProfiles} />
+            <UserList
+              userInfo={sampleProfiles}
+              onUserClick={userClickHandler}
+            />
           </section>
         </main>
         <footer></footer>
       </div>
+      {modalState.isActive && (
+        <ProfileModal
+          userInfo={sampleProfiles[modalState.id]}
+          setModalState={setModalState}
+        />
+      )}
     </div>
   );
 }

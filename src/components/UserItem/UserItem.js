@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './UserItem.module.css';
 
-export default function UserItem({ user }) {
+export default function UserItem({ user, onUserClick }) {
   return (
-    <li className={styles['user-item']} id={user.id}>
+    <li className={styles['user-item']} id={user.id} onClick={onUserClick}>
       <Image
         src={user.pfp}
         alt={`${user.name} 프로필 사진`}

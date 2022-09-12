@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import styles from './ProfileCard.module.css';
 
-export default function ProfileCard({ userInfo, isShadow }) {
+export default function ProfileCard({ userInfo, isShadow, style }) {
   return (
     <div
+      style={{ ...style }}
       className={`${styles['profile-card']} ${
         isShadow ? styles['shadow'] : ''
       }`}
@@ -37,7 +38,7 @@ export default function ProfileCard({ userInfo, isShadow }) {
             <div className={styles['school-info-group']}>
               <div className={styles['img-background']}>
                 <Image
-                  src='/assets/icons/logo_academy.svg'
+                  src='/assets/icons/ico-academy.svg'
                   alt='학사모 로고'
                   width={7}
                   height={6}
