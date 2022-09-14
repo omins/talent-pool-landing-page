@@ -71,17 +71,19 @@ export default function Home() {
       <main className={styles['main-container']}>
         <section className={styles['page-first']}>
           <p className={styles.desc}>
-            인재풀에 프로필 올리고
+            인턴, 이제는 <span>지원</span>하지 말고
             <br />
-            <em>채용 제안</em> 받으세요
+            <em>제안</em> 받으세요
           </p>
-          <ButtonCta isWhiteBtn={true} style={{ marginTop: '380px' }} />
+          <ButtonCta isWhiteBtn={true} style={{ marginTop: '310px' }} />
         </section>
         <section className={styles['page-second']}>
           <p className={styles.desc}>
-            프로필 등록하면
+            이미 만들어놓은 이력서와
             <br />
-            채용 제안이 찾아와요!
+            원하는 회사 기준만 입력하면
+            <br />
+            <em>인턴 제안</em>이 찾아와요!
           </p>
           <div className={styles['profile-card-container']}>
             <ProfileCard
@@ -108,7 +110,7 @@ export default function Home() {
           <p className={styles.desc}>
             이미 등록한 분들의
             <br />
-            프로필을 확인해보세요!
+            프로필도 확인해보세요!
           </p>
           <UserList
             userInfo={sampleProfiles}

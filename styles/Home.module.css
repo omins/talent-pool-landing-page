@@ -38,8 +38,13 @@
   color: #fff;
 }
 
+.page-first .desc span {
+  color: #fcb954;
+}
+
 .page-first .desc em {
   color: #fcb954;
+  font-size: 36px;
 }
 
 .page-second,
@@ -63,6 +68,11 @@
 
 .page-second .desc {
   margin-top: 50px;
+  font-size: 24px;
+}
+
+.page-second .desc em {
+  color: #286cec;
 }
 
 .profile-card-container {
