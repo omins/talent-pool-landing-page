@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import RecruitMsg from '../components/RecruitMsg/RecruitMsg';
@@ -76,6 +77,14 @@ export default function Home() {
             <em>제안</em> 받으세요
           </p>
           <ButtonCta isWhiteBtn={true} style={{ marginTop: '310px' }} />
+          <div className={styles['ico-arrow-down']}>
+            <Image
+              src='/assets/icons/ico-arrow-down.svg'
+              width={30}
+              height={20}
+              alt='장식용 이미지'
+            />
+          </div>
         </section>
         <section className={styles['profile-card-section']}>
           <p className={styles.desc}>
