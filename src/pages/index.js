@@ -120,13 +120,26 @@ export default function Home() {
               className={styles['recruit-msg-container']}
               style={{ top: '171px', left: '85px' }}
             >
-              <RecruitMsg zIndex={5000} />
+              <RecruitMsg
+                companyInfo='핀테크 스타트업'
+                companyName='T사'
+                companyColor='#0064FF'
+                position='개발자 인턴'
+                employee='오민석'
+                style={{ zIndex: 5000 }}
+              />
             </div>
             <div
               className={styles['recruit-msg-container']}
               style={{ top: '337px', left: '-52px' }}
             >
-              <RecruitMsg zIndex={-1} />
+              <RecruitMsg
+                companyInfo='중고거래 스타트업'
+                companyName='D사'
+                companyColor='#FF7E36'
+                position='개발자 인턴'
+                style={{ zIndex: -1 }}
+              />
             </div>
           </div>
           <ButtonCta style={{ marginTop: '30px' }}>
@@ -161,6 +174,80 @@ export default function Home() {
           <ButtonCta style={{ marginTop: '130px' }}>
             지금 프로필 등록하기
           </ButtonCta>
+        </section>
+        <section className={styles['submit-early-seciton']}>
+          <div className={styles['dimmed-layer']}></div>
+          <p className={styles.desc}>
+            먼저 등록한 프로필이
+            <br />
+            가장 먼저 검토 돼요
+          </p>
+          <ButtonCta
+            isWhiteBtn={true}
+            style={{ zIndex: 1, marginTop: '380px' }}
+          >
+            지금 프로필 등록하기
+          </ButtonCta>
+          <RecruitMsg
+            companyInfo='핀테크 스타트업'
+            companyName='T사'
+            companyColor='#0064FF'
+            position='PM 인턴'
+            style={{
+              position: 'absolute',
+              top: '200px',
+              left: '0',
+              zIndex: -1,
+            }}
+          ></RecruitMsg>
+          <RecruitMsg
+            companyInfo='중고거래 스타트업'
+            companyName='D사'
+            companyColor='#FF7E36'
+            position='개발자 인턴'
+            style={{
+              position: 'absolute',
+              top: '329px',
+              left: '60%',
+              zIndex: -1,
+            }}
+          ></RecruitMsg>
+          <RecruitMsg
+            companyInfo='외국계 소비재 회사'
+            companyName='P사'
+            companyColor='#007BC9'
+            position='세일즈 인턴'
+            style={{
+              position: 'absolute',
+              top: '370px',
+              left: '10%',
+              zIndex: -1,
+            }}
+          ></RecruitMsg>
+          <RecruitMsg
+            companyInfo='패션 스타트업'
+            companyName='M사'
+            companyColor='#000000'
+            position='마케팅 인턴'
+            style={{
+              position: 'absolute',
+              top: '539px',
+              left: '60%',
+              zIndex: -1,
+            }}
+          ></RecruitMsg>
+          <RecruitMsg
+            companyInfo='드라마 제작사'
+            companyName='S사'
+            companyColor='#000000'
+            position='기획 PD 인턴'
+            style={{
+              position: 'absolute',
+              top: '578px',
+              left: '-10%',
+              zIndex: -1,
+            }}
+          ></RecruitMsg>
         </section>
       </main>
       <footer></footer>
