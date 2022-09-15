@@ -69,7 +69,7 @@ export default function Home() {
         <h1 className={styles.title}>Logo</h1>
       </header>
       <main className={styles['main-container']}>
-        <section className={styles['page-first']}>
+        <section className={styles['hero-section']}>
           <p className={styles.desc}>
             인턴, 이제는 <span>지원</span>하지 말고
             <br />
@@ -77,7 +77,7 @@ export default function Home() {
           </p>
           <ButtonCta isWhiteBtn={true} style={{ marginTop: '310px' }} />
         </section>
-        <section className={styles['page-second']}>
+        <section className={styles['profile-card-section']}>
           <p className={styles.desc}>
             이미 만들어놓은 이력서와
             <br />
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
           <ButtonCta style={{ marginTop: '30px' }} />
         </section>
-        <section className={styles['page-third']}>
+        <section className={styles['profile-list-section']}>
           <p className={styles.desc}>
             이미 등록한 분들의
             <br />

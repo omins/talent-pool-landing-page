@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.page-first {
+.hero-section {
   height: 746px;
   width: 100%;
   display: flex;
@@ -29,7 +29,7 @@
   background-color: #1a1c1b;
 }
 
-.page-first .desc {
+.hero-section .desc {
   margin-top: 80px;
   text-align: center;
   font-weight: 700;
@@ -38,17 +38,17 @@
   color: #fff;
 }
 
-.page-first .desc span {
+.hero-section .desc span {
   color: #fcb954;
 }
 
-.page-first .desc em {
+.hero-section .desc em {
   color: #fcb954;
   font-size: 36px;
 }
 
-.page-second,
-.page-third {
+.profile-card-section,
+.profile-list-section {
   display: flex;
   height: 790px;
   width: 100%;
@@ -56,8 +56,8 @@
   align-items: center;
 }
 
-.page-second .desc,
-.page-third .desc {
+.profile-card-section .desc,
+.profile-list-section .desc {
   font-weight: 700;
   font-size: 26px;
   line-height: 35px;
@@ -66,12 +66,12 @@
   color: #000000;
 }
 
-.page-second .desc {
+.profile-card-section .desc {
   margin-top: 50px;
   font-size: 24px;
 }
 
-.page-second .desc em {
+.profile-card-section .desc em {
   color: #286cec;
 }
 
@@ -84,6 +84,6 @@
   position: absolute;
 }
 
-.page-third .desc {
+.profile-list-section .desc {
   margin-top: 100px;
 }
