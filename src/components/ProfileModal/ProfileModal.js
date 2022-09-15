@@ -40,11 +40,14 @@ export default function ProfileModal({ userInfo, setModalState }) {
             event.stopPropagation();
           }}
         >
-          <ProfileCard userInfo={userInfo} />
           <div className={styles['btn-close']} onClick={closeModalhandler}>
             <span className={styles['btn-txt']}>닫기</span>
             <Image src={icoClose} alt='닫기 아이콘' />
           </div>
+          <ProfileCard
+            userInfo={userInfo}
+            style={{ display: 'inline-block' }}
+          />
         </div>
       </div>
     </>,
