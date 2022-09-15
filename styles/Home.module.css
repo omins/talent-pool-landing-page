@@ -170,6 +170,7 @@
   position: relative;
   height: 790px;
   width: 100%;
+  overflow: hidden;
 }
 
 .dimmed-layer {
