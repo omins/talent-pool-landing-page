@@ -157,19 +157,14 @@
 }
 
 .skill-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin-top: 16px;
 }
 
 .skill-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  float: left;
+  margin: 2px 1px 0 2px;
   height: 21px;
   padding: 6px 8px;
-  margin-bottom: 5px;
   border: 1px solid #d8d8d8;
   background-color: #fff;
   border-radius: 90px;

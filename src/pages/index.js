@@ -90,7 +90,9 @@ export default function Home() {
             <br />
             <em>제안</em> 받으세요
           </p>
-          <ButtonCta isWhiteBtn={true} style={{ marginTop: '310px' }} />
+          <ButtonCta isWhiteBtn={true} style={{ marginTop: '310px' }}>
+            채용 제안 받기
+          </ButtonCta>
           <div className={styles['ico-arrow-down']}>
             <Image
               src='/assets/icons/ico-arrow-down.svg'
@@ -127,7 +129,23 @@ export default function Home() {
               <RecruitMsg zIndex={-1} />
             </div>
           </div>
-          <ButtonCta style={{ marginTop: '30px' }} />
+          <ButtonCta style={{ marginTop: '30px' }}>
+            지금 프로필 등록하기
+          </ButtonCta>
+        </section>
+        <section className={styles['filter-example-section']}>
+          <p className={styles.desc}>
+            설정한 기준에 미달하는 회사는
+            <br />내 이력서를 볼 수 없으니 안심하세요.
+          </p>
+          <div className={styles['filter-example-container']}>
+            <h5 className={styles.title}>기업 &middot; 산업 필터링</h5>
+            <ul>
+              {sampleProfiles[0].skills.map((skill, idx) => {
+                return <li key={idx}>{skill}</li>;
+              })}
+            </ul>
+          </div>
         </section>
         <section className={styles['profile-list-section']}>
           <p className={styles.desc}>
@@ -140,7 +158,9 @@ export default function Home() {
             onUserClick={userClickHandler}
             style={{ marginTop: '115px' }}
           />
-          <ButtonCta style={{ marginTop: '130px' }} />
+          <ButtonCta style={{ marginTop: '130px' }}>
+            지금 프로필 등록하기
+          </ButtonCta>
         </section>
       </main>
       <footer></footer>
