@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -47,10 +47,17 @@ const sampleProfiles = [
 ];
 
 export default function Home() {
+  const [innerHeight, setInnerHeght] = useState(0);
   const [modalState, setModalState] = useState({
     isActive: false,
     id: 0,
   });
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      setInnerHeght(window.innerHeight);
+    }
+  }, []);
 
   function userClickHandler(event) {
     setModalState(prev => {
@@ -70,7 +77,14 @@ export default function Home() {
         <h1 className={styles.title}>Logo</h1>
       </header>
       <main className={styles['main-container']}>
-        <section className={styles['hero-section']}>
+        <section
+          className={styles['hero-section']}
+          style={
+            innerHeight > 0
+              ? { height: `${innerHeight}px` }
+              : { height: '100vh' }
+          }
+        >
           <p className={styles.desc}>
             인턴, 이제는 <span>지원</span>하지 말고
             <br />
