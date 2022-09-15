@@ -58,7 +58,7 @@ export default function ProfileCard({ userInfo, isShadow, style }) {
             <div className={styles['skill-group']}>
               <h5 className={styles['category-title']}>전문분야 및 스킬</h5>
               <ul className={styles['skill-list']}>
-                {userInfo.skills.map((skill, idx) => {
+                {userInfo.filters.map((skill, idx) => {
                   return (
                     <li key={idx} className={styles['skill-item']}>
                       <span>{skill}</span>

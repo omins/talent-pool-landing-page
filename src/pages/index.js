@@ -20,7 +20,7 @@ const sampleProfiles = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum facilisis cursus. Sed vulputate est eu porttitor fringilla.',
     pfp: '/assets/images/sihyun.jpg',
-    skills: ['IT', 'StartUp', 'SW개발', 'Front-end', 'Back-end'],
+    filters: ['IT', 'StartUp', 'SW개발', 'Front-end', 'Back-end'],
   },
   {
     id: 1,
@@ -31,7 +31,7 @@ const sampleProfiles = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum facilisis cursus. Sed vulputate est eu porttitor fringilla.',
     pfp: '/assets/images/zepeto.jpeg',
-    skills: ['StartUp', 'PM', 'PO'],
+    filters: ['StartUp', 'PM', 'PO'],
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const sampleProfiles = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum facilisis cursus. Sed vulputate est eu porttitor fringilla.',
     pfp: '/assets/images/memoji.png',
-    skills: ['IT', 'SW개발', 'AI', 'Data Science'],
+    filters: ['IT', 'SW개발', 'AI', 'Data Science'],
   },
 ];
 
@@ -154,7 +154,7 @@ export default function Home() {
           <div className={styles['filter-example-container']}>
             <h5 className={styles.title}>기업 &middot; 산업 필터링</h5>
             <ul>
-              {sampleProfiles[0].skills.map((skill, idx) => {
+              {sampleProfiles[0].filters.map((skill, idx) => {
                 return <li key={idx}>{skill}</li>;
               })}
             </ul>
