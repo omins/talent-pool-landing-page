@@ -17,10 +17,20 @@ const sampleProfiles = [
     school: '고려대학교',
     schoolYear: '4',
     major: '체육교육과 / 소프트웨어벤처',
+    resumeURL:
+      'https://ominspage.notion.site/Kevin-9df0c140b8c24839a7381675ce6d856c',
+    desiredCompanyType: ['스타트업'],
+    desiredJob: ['개발', '웹 프론트엔드'],
+    employmentType: ['인턴(풀타임)', '정규직'],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum facilisis cursus. Sed vulputate est eu porttitor fringilla.',
     pfp: '/assets/images/sihyun.jpg',
-    filters: ['IT', 'StartUp', 'SW개발', 'Front-end', 'Back-end'],
+    filters: [
+      '📈 급성장 중',
+      '📚 학습 지원',
+      '🪖 병역 특례',
+      '👋 수평적인 조직문화',
+    ],
   },
   {
     id: 1,
@@ -28,10 +38,20 @@ const sampleProfiles = [
     school: '고려대학교',
     schoolYear: '3',
     major: ' 경영학과 / 소프트웨어벤처',
+    resumeURL:
+      'https://ominspage.notion.site/Kevin-9df0c140b8c24839a7381675ce6d856c',
+    desiredCompanyType: ['스타트업'],
+    desiredJob: ['개발', '웹 프론트엔드'],
+    employmentType: ['인턴(풀타임)'],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum facilisis cursus. Sed vulputate est eu porttitor fringilla.',
     pfp: '/assets/images/zepeto.jpeg',
-    filters: ['StartUp', 'PM', 'PO'],
+    filters: [
+      '📈 급성장 중',
+      '📚 학습 지원',
+      '🪖 병역 특례',
+      '👋 수평적인 조직문화',
+    ],
   },
   {
     id: 2,
@@ -39,10 +59,20 @@ const sampleProfiles = [
     school: '고려대학교',
     schoolYear: '4',
     major: '컴퓨터학과',
+    resumeURL:
+      'https://ominspage.notion.site/Kevin-9df0c140b8c24839a7381675ce6d856c',
+    desiredCompanyType: ['스타트업'],
+    desiredJob: ['개발', '웹 프론트엔드'],
+    employmentType: ['인턴(풀타임)'],
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elementum facilisis cursus. Sed vulputate est eu porttitor fringilla.',
     pfp: '/assets/images/memoji.png',
-    filters: ['IT', 'SW개발', 'AI', 'Data Science'],
+    filters: [
+      '📈 급성장 중',
+      '📚 학습 지원',
+      '🪖 병역 특례',
+      '👋 수평적인 조직문화',
+    ],
   },
 ];
 
@@ -121,11 +151,11 @@ export default function Home() {
               <ProfileCard
                 userInfo={sampleProfiles[0]}
                 isShadow={true}
-                style={{ marginTop: '35px' }}
+                style={{ pointerEvents: 'none' }}
               />
               <div
                 className={styles['recruit-msg-container']}
-                style={{ top: '171px', left: '85px' }}
+                style={{ top: '62px', left: '85px' }}
               >
                 <RecruitMsg
                   companyInfo='핀테크 스타트업'
@@ -133,7 +163,7 @@ export default function Home() {
                   companyColor='#0064FF'
                   position='개발자 인턴'
                   employee='오민석'
-                  style={{ zIndex: 5000 }}
+                  style={{ zIndex: 5000, pointerEvents: 'none' }}
                 />
               </div>
               <div
@@ -145,7 +175,7 @@ export default function Home() {
                   companyName='D사'
                   companyColor='#FF7E36'
                   position='개발자 인턴'
-                  style={{ zIndex: -1 }}
+                  style={{ zIndex: -1, pointerEvents: 'none' }}
                 />
               </div>
             </div>
@@ -159,7 +189,7 @@ export default function Home() {
               <br />내 이력서를 볼 수 없으니 안심하세요.
             </p>
             <div className={styles['filter-example-container']}>
-              <h5 className={styles.title}>기업 &middot; 산업 필터링</h5>
+              <h5 className={styles.title}>희망기준</h5>
               <ul>
                 {sampleProfiles[0].filters.map((skill, idx) => {
                   return <li key={idx}>{skill}</li>;
@@ -182,7 +212,14 @@ export default function Home() {
               지금 프로필 등록하기
             </ButtonCta>
           </section>
-          <section className={styles['submit-early-seciton']}>
+          <section
+            className={styles['submit-early-seciton']}
+            style={
+              innerHeight > 0
+                ? { height: `${innerHeight}px` }
+                : { height: '100vh' }
+            }
+          >
             <div className={styles['dimmed-layer']}></div>
             <p className={styles.desc}>
               먼저 등록한 프로필이

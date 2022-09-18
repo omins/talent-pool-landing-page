@@ -28,40 +28,86 @@ export default function ProfileCard({ userInfo, isShadow, style }) {
           <h4 className={styles.title}>프로필</h4>
         </div>
         <div className={styles['profile-detail-main']}>
-          <div className={styles['school-info']}>
-            <div className={styles['title-group']}>
-              <h5 className={styles['category-title']}>학년</h5>
-              <span
-                className={styles['category-subtitle']}
-              >{`${userInfo.schoolYear}학년`}</span>
-            </div>
-            <div className={styles['school-info-group']}>
+          <div className={styles['resume-group']}>
+            <h5 className={styles['category-title']}>이력서</h5>
+            <a
+              href={userInfo.resumeURL}
+              className={styles['resume-link']}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <div className={styles['img-background']}>
                 <Image
-                  src='/assets/icons/ico-academy.svg'
-                  alt='학사모 로고'
-                  width={7}
-                  height={6}
+                  src='/assets/icons/ico-url.svg'
+                  alt='이력서 링크'
+                  width={10}
+                  height={10}
+                  className={styles.ico}
                 />
               </div>
-              <div className={styles['school-detail']}>
-                <span className={styles.school}>{userInfo.school}</span>
-                <span className={styles.major}>{userInfo.major}</span>
-              </div>
-            </div>
+            </a>
           </div>
           <div className={styles['user-info']}>
             <div className={styles['desc-group']}>
               <h5 className={styles['category-title']}>자기소개</h5>
               <p className={styles['user-desc']}>{userInfo.description}</p>
             </div>
-            <div className={styles['skill-group']}>
-              <h5 className={styles['category-title']}>전문분야 및 스킬</h5>
-              <ul className={styles['skill-list']}>
-                {userInfo.filters.map((skill, idx) => {
+            <div className={styles['info-group-container']}>
+              <div className={styles['title-group']}>
+                <h5 className={styles['category-title']}>고용형태</h5>
+                <div className={styles['employment-status-group']}>
+                  <span className={styles['employment-status']}>구직중</span>
+                  <div className={styles['ico-toggle-active']}>
+                    <Image
+                      src='/assets/icons/ico-toggle-active.svg'
+                      alt='장식용 이미지'
+                      width={11}
+                      height={7}
+                    />
+                  </div>
+                </div>
+              </div>
+              <ul className={styles['info-list']}>
+                {userInfo.employmentType.map((type, idx) => {
                   return (
-                    <li key={idx} className={styles['skill-item']}>
-                      <span>{skill}</span>
+                    <li key={idx} className={styles['info-item']}>
+                      <span>{type}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className={styles['info-group-container']}>
+              <h5 className={styles['category-title']}>희망기업</h5>
+              <ul className={styles['info-list']}>
+                {userInfo.desiredCompanyType.map((type, idx) => {
+                  return (
+                    <li key={idx} className={styles['info-item']}>
+                      <span>{type}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className={styles['info-group-container']}>
+              <h5 className={styles['category-title']}>희망직무</h5>
+              <ul className={styles['info-list']}>
+                {userInfo.desiredJob.map((job, idx) => {
+                  return (
+                    <li key={idx} className={styles['info-item']}>
+                      <span>{job}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className={styles['info-group-container']}>
+              <h5 className={styles['category-title']}>희망기준</h5>
+              <ul className={styles['info-list']}>
+                {userInfo.filters.map((filter, idx) => {
+                  return (
+                    <li key={idx} className={styles['info-item']}>
+                      <span>{filter}</span>
                     </li>
                   );
                 })}

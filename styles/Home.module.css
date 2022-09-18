@@ -101,6 +101,7 @@
 
 .profile-card-section .desc {
   font-size: 22px;
+  margin-bottom: 35px;
 }
 
 .profile-card-section .desc em {
@@ -127,7 +128,7 @@
 }
 
 .filter-example-container {
-  padding: 15px;
+  padding: 20px 15px;
   width: 233px;
   height: 120px;
   margin-top: 80px;
@@ -138,21 +139,21 @@
 
 .filter-example-container .title {
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   color: #414242;
 }
 
 .filter-example-container ul {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .filter-example-container li {
   float: left;
-  margin: 2px 1px 0 2px;
+  margin: 2px 1px 0 1px;
   height: 21px;
-  padding: 6px 8px;
+  padding: 6px;
   border: 1px solid #d8d8d8;
   background-color: #fff;
   border-radius: 90px;
