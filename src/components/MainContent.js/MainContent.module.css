@@ -1,0 +1,221 @@
+.hero-section .title {
+  position: relative;
+  width: 139px;
+  height: 44px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4.4rem;
+  background-color: #212322;
+  z-index: 9998;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  background-color: #1a1c1b;
+}
+
+.hero-section .desc {
+  margin-top: 19px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+  color: #fff;
+}
+
+.hero-section .desc span {
+  color: #fcb954;
+}
+
+.hero-section .desc em {
+  color: #fcb954;
+  font-size: 24px;
+}
+
+@keyframes ico-up-down {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-section .ico-arrow-down {
+  position: absolute;
+  bottom: 20px;
+  animation: 2s ease 0s infinite normal none running ico-up-down;
+}
+
+.profile-card-section,
+.profile-list-section {
+  display: flex;
+  height: 790px;
+  width: 100%;
+  /* flex-direction: column;
+  align-items: center; */
+}
+
+.profile-card-section .desc,
+.profile-list-section .desc {
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+  color: #000000;
+}
+
+.profile-card-section .desc {
+  font-size: 22px;
+  margin-bottom: 35px;
+}
+
+.profile-card-section .desc em {
+  color: #286cec;
+}
+
+.profile-card-container {
+  display: inline-block;
+  position: relative;
+}
+
+.profile-card {
+  width: 233px;
+  height: 531px;
+  border-radius: 15px;
+  overflow: hidden;
+  filter: drop-shadow(4px 4px 50px rgba(0, 0, 0, 0.25));
+}
+
+.filter-example-section {
+  height: 395px;
+  width: 100%;
+}
+
+.filter-example-section .desc {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: #000000;
+}
+
+.filter-example-container {
+  padding: 20px 15px;
+  width: 233px;
+  height: 120px;
+  margin-top: 80px;
+  border-radius: 8px;
+  filter: drop-shadow(4px 4px 50px rgba(0, 0, 0, 0.25));
+  background-color: #fff;
+}
+
+.filter-example-container .title {
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #414242;
+}
+
+.filter-example-container ul {
+  margin-top: 15px;
+}
+
+.filter-example-container li {
+  float: left;
+  margin: 2px 1px 0 1px;
+  height: 21px;
+  padding: 6px;
+  border: 1px solid #d8d8d8;
+  background-color: #fff;
+  border-radius: 90px;
+}
+
+.filter-img {
+  margin-top: 42px;
+  position: relative;
+  width: 314px;
+  height: 164px;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: drop-shadow(0px 2px 30px rgba(0, 0, 0, 0.12));
+}
+
+.recruit-msg-container {
+  position: absolute;
+}
+
+.profile-list-section .desc {
+  font-size: 22px;
+}
+
+.submit-early-seciton {
+  position: relative;
+  height: 790px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dimmed-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.recruit-msg-img {
+  position: relative;
+  width: 481px;
+  height: 333px;
+  margin-top: 47px;
+  z-index: -1;
+}
+
+.submit-early-seciton .desc {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}

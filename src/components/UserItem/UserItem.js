@@ -5,14 +5,12 @@ import FilterItem from '../FilterItem/FilterItem';
 import styles from './UserItem.module.css';
 
 export default function UserItem({ user, onUserClick }) {
-  const filters = [user.desiredCompanyType[0], ...user.desiredJob];
-
   return (
     <li className={styles['user-item']} id={user.id} onClick={onUserClick}>
       <div className={styles.pfp}>
         <Image
           src={user.pfp}
-          alt={`${user.name} 프로필 사진`}
+          alt='프로필 사진'
           layout='fill'
           objectFit='cover'
           objectPosition='0 0'
@@ -23,7 +21,7 @@ export default function UserItem({ user, onUserClick }) {
         <span className={styles.major}>{user.major}</span>
         <span className={styles.school}>{user.school}</span>
         <ul className={styles['filter-list']}>
-          {filters.map((filter, idx) => {
+          {user.filters.map((filter, idx) => {
             return <FilterItem key={idx}>{filter}</FilterItem>;
           })}
         </ul>

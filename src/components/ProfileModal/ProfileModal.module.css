@@ -31,3 +31,11 @@
   font-size: 16px;
   color: #fff;
 }
+
+.card {
+  position: relative;
+  height: 624px;
+  width: 273px;
+  overflow: hidden;
+  border-radius: 18px;
+}

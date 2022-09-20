@@ -6,7 +6,7 @@ import ProfileCard from '../ProfileCard/ProfileCard';
 import icoClose from '../../../public/assets/icons/ico-close.svg';
 import styles from './ProfileModal.module.css';
 
-export default function ProfileModal({ userInfo, setModalState }) {
+export default function ProfileModal({ modalState, setModalState }) {
   function closeModalhandler() {
     setModalState(prev => {
       return {
@@ -44,10 +44,13 @@ export default function ProfileModal({ userInfo, setModalState }) {
             <span className={styles['btn-txt']}>닫기</span>
             <Image src={icoClose} alt='닫기 아이콘' />
           </div>
-          <ProfileCard
-            userInfo={userInfo}
-            style={{ display: 'inline-block' }}
-          />
+          <div className={styles.card}>
+            <Image
+              src={`/assets/images/profile${modalState.id}.jpg`}
+              alt='프로필 카드'
+              layout='fill'
+            />
+          </div>
         </div>
       </div>
     </>,
