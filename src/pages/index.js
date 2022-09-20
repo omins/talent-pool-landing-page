@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import * as ga from '../lib/ga';
+
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -89,6 +91,18 @@ export default function Home() {
     }
   }, []);
 
+  function ctaClickHandler(event) {
+    const id = event.target.closest('a').id;
+    if (id !== undefined) {
+      ga.event({
+        action: 'click_cta',
+        params: {
+          ctaLocation: id,
+        },
+      });
+    }
+  }
+
   function userClickHandler(event) {
     setModalState(prev => {
       return {
@@ -127,7 +141,12 @@ export default function Home() {
               <br />
               <em>제안</em> 받으세요
             </p>
-            <ButtonCta isWhiteBtn={true} style={{ marginTop: '310px' }}>
+            <ButtonCta
+              isWhiteBtn={true}
+              style={{ marginTop: '310px' }}
+              onClick={ctaClickHandler}
+              id='hero_section_cta'
+            >
               채용 제안 받기
             </ButtonCta>
             <div className={styles['ico-arrow-down']}>
@@ -179,7 +198,11 @@ export default function Home() {
                 />
               </div>
             </div>
-            <ButtonCta style={{ marginTop: '30px' }}>
+            <ButtonCta
+              style={{ marginTop: '30px' }}
+              onClick={ctaClickHandler}
+              id='profile_card_section_cta'
+            >
               지금 프로필 등록하기
             </ButtonCta>
           </section>
@@ -208,7 +231,11 @@ export default function Home() {
               onUserClick={userClickHandler}
               style={{ marginTop: '115px' }}
             />
-            <ButtonCta style={{ marginTop: '130px' }}>
+            <ButtonCta
+              style={{ marginTop: '130px' }}
+              onClick={ctaClickHandler}
+              id='profile_list_section_cta'
+            >
               지금 프로필 등록하기
             </ButtonCta>
           </section>
@@ -229,6 +256,8 @@ export default function Home() {
             <ButtonCta
               isWhiteBtn={true}
               style={{ zIndex: 1, marginTop: '380px' }}
+              onClick={ctaClickHandler}
+              id='submit_early_section_cta'
             >
               지금 프로필 등록하기
             </ButtonCta>
