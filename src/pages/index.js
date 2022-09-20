@@ -9,6 +9,7 @@ import RecruitMsg from '../components/RecruitMsg/RecruitMsg';
 import ButtonCta from '../components/ButtonCta/ButtonCta';
 import UserList from '../components/UserList/UserList';
 import ProfileModal from '../components/ProfileModal/ProfileModal';
+import FilterItem from '../components/FilterItem/FilterItem';
 
 import styles from '../../styles/Home.module.css';
 
@@ -124,9 +125,6 @@ export default function Home() {
         <Head>
           <title>김인턴</title>
         </Head>
-        <header className={styles.header}>
-          <h1 className={styles.title}>Logo</h1>
-        </header>
         <main className={styles['main-container']}>
           <section
             className={styles['hero-section']}
@@ -136,14 +134,21 @@ export default function Home() {
                 : { height: '100vh' }
             }
           >
+            <h1 className={styles.title}>김인턴</h1>
             <p className={styles.desc}>
               인턴, 이제는 <span>지원</span>하지 말고
               <br />
-              <em>제안</em> 받으세요
+              <em>제안</em>받으세요
             </p>
+            <Image
+              src='/assets/images/main-background.png'
+              alt='장식용 이미지'
+              width={343}
+              height={234}
+            />
             <ButtonCta
               isWhiteBtn={true}
-              style={{ marginTop: '310px' }}
+              style={{ marginTop: '33px' }}
               onClick={ctaClickHandler}
               id='hero_section_cta'
             >
@@ -198,13 +203,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            <ButtonCta
-              style={{ marginTop: '30px' }}
-              onClick={ctaClickHandler}
-              id='profile_card_section_cta'
-            >
-              지금 프로필 등록하기
-            </ButtonCta>
           </section>
           <section className={styles['filter-example-section']}>
             <p className={styles.desc}>
@@ -215,7 +213,7 @@ export default function Home() {
               <h5 className={styles.title}>희망기준</h5>
               <ul>
                 {sampleProfiles[0].filters.map((skill, idx) => {
-                  return <li key={idx}>{skill}</li>;
+                  return <FilterItem key={idx}>{skill}</FilterItem>;
                 })}
               </ul>
             </div>

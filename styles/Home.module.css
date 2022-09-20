@@ -1,7 +1,9 @@
-.title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: white;
+.hero-section .title {
+  font-family: 'SBAggroB';
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 45px;
+  color: #ffffff;
 }
 
 .header {
@@ -40,10 +42,11 @@
 }
 
 .hero-section .desc {
+  margin-top: 19px;
   text-align: center;
   font-weight: 700;
-  font-size: 30px;
-  line-height: 45px;
+  font-size: 22px;
+  line-height: 130%;
   color: #fff;
 }
 
@@ -53,7 +56,7 @@
 
 .hero-section .desc em {
   color: #fcb954;
-  font-size: 36px;
+  font-size: 24px;
 }
 
 @keyframes ico-up-down {
@@ -93,8 +96,7 @@
 .profile-card-section .desc,
 .profile-list-section .desc {
   font-weight: 700;
-  line-height: 35px;
-  letter-spacing: -0.5px;
+  line-height: 140%;
   text-align: center;
   color: #000000;
 }
@@ -114,14 +116,14 @@
 }
 
 .filter-example-section {
-  height: 536px;
+  height: 395px;
   width: 100%;
 }
 
 .filter-example-section .desc {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 35px;
+  font-size: 22px;
+  line-height: 140%;
   text-align: center;
   letter-spacing: -0.5px;
   color: #000000;
@@ -164,7 +166,7 @@
 }
 
 .profile-list-section .desc {
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .submit-early-seciton {

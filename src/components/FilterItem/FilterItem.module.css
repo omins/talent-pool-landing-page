@@ -1,0 +1,12 @@
+.item {
+  float: left;
+  margin: 3px 1px 0 1px;
+  height: 21px;
+  padding: 5px;
+  border: 1px solid #d8d8d8;
+  background-color: #fff;
+  border-radius: 90px;
+  font-weight: 500;
+  font-size: 9px;
+  color: #333534;
+}

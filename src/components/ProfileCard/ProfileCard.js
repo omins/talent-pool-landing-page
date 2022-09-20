@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import FilterItem from '../FilterItem/FilterItem';
 import styles from './ProfileCard.module.css';
 
 export default function ProfileCard({ userInfo, isShadow, style }) {
@@ -70,9 +71,9 @@ export default function ProfileCard({ userInfo, isShadow, style }) {
               <ul className={styles['info-list']}>
                 {userInfo.employmentType.map((type, idx) => {
                   return (
-                    <li key={idx} className={styles['info-item']}>
+                    <FilterItem key={idx}>
                       <span>{type}</span>
-                    </li>
+                    </FilterItem>
                   );
                 })}
               </ul>
@@ -82,9 +83,9 @@ export default function ProfileCard({ userInfo, isShadow, style }) {
               <ul className={styles['info-list']}>
                 {userInfo.desiredCompanyType.map((type, idx) => {
                   return (
-                    <li key={idx} className={styles['info-item']}>
+                    <FilterItem key={idx}>
                       <span>{type}</span>
-                    </li>
+                    </FilterItem>
                   );
                 })}
               </ul>
@@ -94,9 +95,9 @@ export default function ProfileCard({ userInfo, isShadow, style }) {
               <ul className={styles['info-list']}>
                 {userInfo.desiredJob.map((job, idx) => {
                   return (
-                    <li key={idx} className={styles['info-item']}>
+                    <FilterItem key={idx}>
                       <span>{job}</span>
-                    </li>
+                    </FilterItem>
                   );
                 })}
               </ul>
@@ -106,9 +107,9 @@ export default function ProfileCard({ userInfo, isShadow, style }) {
               <ul className={styles['info-list']}>
                 {userInfo.filters.map((filter, idx) => {
                   return (
-                    <li key={idx} className={styles['info-item']}>
+                    <FilterItem key={idx}>
                       <span>{filter}</span>
-                    </li>
+                    </FilterItem>
                   );
                 })}
               </ul>
