@@ -122,7 +122,7 @@ export default function Home() {
       )}
       <div className={styles.container}>
         <Head>
-          <title>인재풀 등록</title>
+          <title>김인턴</title>
         </Head>
         <header className={styles.header}>
           <h1 className={styles.title}>Logo</h1>

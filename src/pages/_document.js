@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           name='description'
-          content='인재풀에 정보 등록하고 채용 제안 받기'
+          content='김인턴에 정보 등록하고 채용 제안 받기'
         />
       </Head>
       <body>
