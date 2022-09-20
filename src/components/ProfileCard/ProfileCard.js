@@ -1,8 +1,9 @@
+import React from 'react';
 import Image from 'next/image';
 import FilterItem from '../FilterItem/FilterItem';
 import styles from './ProfileCard.module.css';
 
-export default function ProfileCard({ userInfo, isShadow, style }) {
+export default React.memo(function ProfileCard({ userInfo, isShadow, style }) {
   return (
     <div
       style={{ ...style }}
@@ -119,4 +120,4 @@ export default function ProfileCard({ userInfo, isShadow, style }) {
       </div>
     </div>
   );
-}
+});
