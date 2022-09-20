@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as ga from '../lib/ga';
 
 import Head from 'next/head';
@@ -134,7 +134,9 @@ export default function Home() {
                 : { height: '100vh' }
             }
           >
-            <h1 className={styles.title}>김인턴</h1>
+            <h1 className={styles.title}>
+              <Image src='/assets/images/logo.png' alt='김인턴' layout='fill' />
+            </h1>
             <p className={styles.desc}>
               인턴, 이제는 <span>지원</span>하지 말고
               <br />
