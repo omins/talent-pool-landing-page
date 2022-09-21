@@ -35,6 +35,22 @@ const sampleProfiles = [
     pfp: '/assets/images/pfp2.jpeg',
     filters: ['스타트업', '개발'],
   },
+  {
+    id: 3,
+    name: '김수민',
+    major: '통계학과 | 경영학과',
+    school: '고려대학교',
+    pfp: '/assets/images/pfp3.png',
+    filters: ['대기업', '인사・HR', '마케팅'],
+  },
+  {
+    id: 4,
+    name: '이우진',
+    major: '전기전자공학부',
+    school: '홍익대학교',
+    pfp: '/assets/images/pfp4.png',
+    filters: ['중견기업', '개발', '전략/기획'],
+  },
 ];
 
 export default React.memo(function MainContent({ userClickHandler }) {
