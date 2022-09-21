@@ -5,6 +5,7 @@
   height: 320px;
   flex-wrap: nowrap;
   overflow-x: auto;
+  padding-right: 36px;
 }
 
 @media (min-width: 660px) {

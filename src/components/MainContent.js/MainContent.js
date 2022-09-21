@@ -109,6 +109,8 @@ export default React.memo(function MainContent({ userClickHandler }) {
                 src='/assets/images/profile0.jpg'
                 alt='프로필 카드'
                 layout='fill'
+                objectFit='cover'
+                className={styles['profile-card-img']}
               />
             </div>
             <div
@@ -143,11 +145,12 @@ export default React.memo(function MainContent({ userClickHandler }) {
             설정한 기준에 미달하는 회사는
             <br />내 이력서를 볼 수 없으니 안심하세요.
           </p>
-          <div className={styles['filter-img']}>
+          <div className={styles['filter-img-container']}>
             <Image
               src='/assets/images/standard.jpg'
               alt='희망기준'
               layout='fill'
+              className={styles['filter-img']}
             />
           </div>
         </section>
