@@ -39,3 +39,10 @@
   overflow: hidden;
   border-radius: 18px;
 }
+
+@media (max-height: 674px) {
+  .card {
+    width: 233px;
+    height: 531px;
+  }
+}
