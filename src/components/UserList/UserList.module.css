@@ -6,6 +6,12 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   padding-right: 36px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 @media (min-width: 660px) {
