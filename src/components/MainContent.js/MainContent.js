@@ -27,6 +27,14 @@ const sampleProfiles = [
     pfp: '/assets/images/pfp1.png',
     filters: ['스타트업', '기획', 'PM/PO'],
   },
+  {
+    id: 2,
+    name: '한국일',
+    major: '정치외교학과',
+    school: '고려대학교',
+    pfp: '/assets/images/pfp2.jpeg',
+    filters: ['스타트업', '개발'],
+  },
 ];
 
 export default React.memo(function MainContent({ userClickHandler }) {

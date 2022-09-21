@@ -13,7 +13,7 @@
 }
 
 .user-item + .user-item {
-  margin-left: 14px;
+  margin-left: 10px;
 }
 
 .user-item:first-child {
