@@ -171,10 +171,10 @@ export default React.memo(function MainContent({ userClickHandler }) {
           <UserList
             userInfo={sampleProfiles}
             onUserClick={userClickHandler}
-            style={{ marginTop: '115px' }}
+            style={{ marginTop: '50px' }}
           />
           <ButtonCta
-            style={{ marginTop: '130px' }}
+            style={{ marginTop: '50px' }}
             onClick={ctaClickHandler}
             id='profile_list_section_cta'
           >
